@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter | Shehroz Khan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">🌡️ TempConvert</div>
+            <p class="tagline">Professional Temperature Converter</p>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Top Card — Input -->
+        <section class="input-card">
+            <div class="card-label">Enter Temperature</div>
+
+            <div class="input-row">
+                <input 
+                    type="number" 
+                    id="tempInput" 
+                    class="temp-input" 
+                    placeholder="e.g. 100"
+                >
+                <div class="unit-selector">
+                    <button class="unit-btn active" data-unit="celsius">°C</button>
+                    <button class="unit-btn" data-unit="fahrenheit">°F</button>
+                    <button class="unit-btn" data-unit="kelvin">K</button>
+                </div>
+            </div>
+
+            <div class="error-msg" id="errorMsg">⚠️ Please enter a valid number</div>
+            <div class="zero-msg" id="zeroMsg">🧊 Below absolute zero! Input must be ≥ −273.15°C</div>
+
+            <button class="convert-btn" id="convertBtn">
+                Convert →
+            </button>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="card-label">Results</div>
+
+            <div class="results-grid">
+                <div class="result-card" id="celsiusCard">
+                    <div class="result-icon">🌡️</div>
+                    <div class="result-unit">Celsius</div>
+                    <div class="result-value" id="celsiusResult">—</div>
+                    <div class="result-symbol">°C</div>
+                </div>
+
+                <div class="result-card" id="fahrenheitCard">
+                    <div class="result-icon">🌡️</div>
+                    <div class="result-unit">Fahrenheit</div>
+                    <div class="result-value" id="fahrenheitResult">—</div>
+                    <div class="result-symbol">°F</div>
+                </div>
+
+                <div class="result-card" id="kelvinCard">
+                    <div class="result-icon">⚗️</div>
+                    <div class="result-unit">Kelvin</div>
+                    <div class="result-value" id="kelvinResult">—</div>
+                    <div class="result-symbol">K</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="reference-section">
+            <div class="card-label">Quick Reference</div>
+            <div class="ref-grid">
+                <div class="ref-item">
+                    <span class="ref-label">Water Freezes</span>
+                    <span class="ref-val">0°C / 32°F / 273.15K</span>
+                </div>
+                <div class="ref-item">
+                    <span class="ref-label">Water Boils</span>
+                    <span class="ref-val">100°C / 212°F / 373.15K</span>
+                </div>
+                <div class="ref-item">
+                    <span class="ref-label">Body Temp</span>
+                    <span class="ref-val">37°C / 98.6°F / 310.15K</span>
+                </div>
+                <div class="ref-item">
+                    <span class="ref-label">Absolute Zero</span>
+                    <span class="ref-val">−273.15°C / −459.67°F / 0K</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Shehroz Khan — Web Development Intern @ OasisInfoByte</p>
+        <p class="created">Created by Shehroz Khan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
